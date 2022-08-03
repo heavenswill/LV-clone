@@ -1,38 +1,428 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 855px) {
+  .buttons {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.controller {
+  width: 100%;
+  height: 49vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: end;
+}
+
+@media screen and (max-width: 855px) {
+  .controller {
+    width: 100%;
+    height: 140vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+
+@media screen and (min-width: 1750px) {
+  .controller {
+    width: 100%;
+    height: 46vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* position: fixed; */
+  }
+}
+.control {
+  display: flex;
+  height: 40px;
+  gap: 5px;
+}
+
+@media screen and (max-width: 855px) {
+  .control {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.spring {
+  color: white;
+  font-size: 38px;
+}
+
+@media screen and (max-width: 855px) {
+  .spring {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.button1 {
+  border: none;
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: "Louis Vuitton Web", "Helvetica Neue", "Helvetica", Arial,
+    sans-serif;
+  word-spacing: 3px;
+}
+
+.buttonn {
+  border: none;
+  width: 280px;
+  height: 45px;
+}
+
+.buttonn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 855px) {
+  .play {
+    margin-right: 50px;
+    margin-top: 20px;
+    font-size: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .play {
+    margin-right: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 855px) {
+  .stop {
+    margin-right: 50px;
+    margin-top: 20px;
+    font-size: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .stop {
+    margin-right: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.offsound {
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 33px;
+}
+
+.onsound {
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 33px;
+}
+
+@media screen and (max-width: 855px) {
+  .onsound {
+    margin-left: 22px;
+    padding-bottom: 3px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .offsound {
+    margin-left: 22px;
+    padding-bottom: 3px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.handle {
+  background-image: url("https://us.louisvuitton.com/images/is/image/Handle_Soft_Trunk_V2_DI3.jpg?wid=2048");
+  background-size: 100%;
+  margin-top: 5vw;
+  height: 55vw;
+}
+
+@media screen and (max-width: 855px) {
+  .handle {
+    background-image: url("https://us.louisvuitton.com/images/is/image/Daybreak_HP_DI4.jpg?wid=824");
+    background-size: 100%;
+    margin-top: 5vw;
+    height: 173vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .handle {
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .handle {
+    display: grid;
+    grid-template-rows: 84% 8% 8%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .handle {
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+.h11 {
+  grid-area: h1;
+}
+.h11 h1 {
+  margin-left: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 855px) {
+  .h11 h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vw;
+    font-size: 30px;
+    color: white;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.images-button {
+  grid-area: buttons;
+  display: flex;
+  font-size: 30px;
+  gap: 20px;
+}
+
+@media screen and (max-width: 855px) {
+  .images-button {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    margin-top: 13vw;
+    gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.handle2 {
+  background-image: url("https://us.louisvuitton.com/images/is/image/PUSH4_MONOGRAM_EMPREINTE_BR_DI3.jpg?wid=2048");
+  background-size: 100%;
+  margin-top: 5vw;
+  height: 56vw;
+  box-shadow: inset 0px -120px 60px 0px rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 855px) {
+  .handle2 {
+    background-image: url("https://us.louisvuitton.com/images/is/image/Handle_Soft_Trunk_V3_HP_DI4.jpg?wid=824");
+    background-size: 100%;
+    margin-top: -7vw;
+    height: 173vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .handle2 {
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .handle2 {
+    display: grid;
+    grid-template-rows: 84% 8% 8%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .handle2 {
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+.h112 {
+  grid-area: h1;
+}
+.h112 h1 {
+  margin-left: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 855px) {
+  .h112 h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vw;
+    font-size: 30px;
+    color: white;
+  }
+}
+.images-button2 {
+  grid-area: buttons;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 855px) {
+  .images-button2 {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    margin-top: 13vw;
+    gap: 20px;
+  }
+}
+
+.handle3 {
+  background-image: url("https://us.louisvuitton.com/images/is/image/%E2%80%8BU_Ma_Brand_campaign_France_Mont_St_Michel_HP_DI3.jpg?wid=2048");
+  background-size: 100%;
+  margin-top: 2vw;
+  height: 55vw;
+}
+
+@media screen and (max-width: 855px) {
+  .handle3 {
+    background-image: url("https://us.louisvuitton.com/images/is/image/U_Ma_Brand_campaign_France_Mont_St_Michel_V3_HP_DI4.jpg?wid=656");
+    background-size: 100%;
+    margin-top: -7vw;
+    height: 173vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .handle3 {
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .handle3 {
+    display: grid;
+    grid-template-rows: 84% 8% 8%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .handle3 {
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+    grid-template-areas:
+      "not"
+      "h1"
+      "buttons";
+  }
+}
+
+.h113 {
+  grid-area: h1;
+}
+.h113 h1 {
+  margin-left: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 855px) {
+  .h113 h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vw;
+    font-size: 30px;
+    color: white;
+  }
+}
+.images-button3 {
+  grid-area: buttons;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 855px) {
+  .images-button3 {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    margin-top: 13vw;
+    gap: 20px;
   }
 }

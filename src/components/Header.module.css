@@ -1,0 +1,74 @@
+#border {
+  height: 116px;
+  color: white;
+  position: fixed;
+  z-index: 1;
+}
+
+#border button {
+  color: white;
+}
+
+#border:hover {
+  color: black;
+  background-color: white;
+  transition: 500ms;
+}
+
+#border:hover button {
+  color: black;
+}
+
+#icon {
+  cursor: pointer;
+}
+
+#search {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#logos {
+  text-align: center;
+}
+
+#logo {
+  display: inline-block;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  text-align: center;
+  font-size: 29px;
+  font-weight: 500;
+  transform: scale(1.1, 1);
+}
+
+#whislist {
+  display: flex;
+  justify-content: end;
+  font-size: 15px;
+  font-weight: 500;
+  /* text-align: end; */
+}
+
+#navbar {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+#navbar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+}
+
+@media screen and (max-width: 855px) {
+  #border {
+    display: none;
+  }
+}

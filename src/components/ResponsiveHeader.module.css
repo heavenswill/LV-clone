@@ -1,0 +1,73 @@
+@media screen and (max-width: 855px) {
+  #navbar {
+    /* position: fixed; */
+    position: fixed;
+    z-index: 1;
+    color: white;
+    /* height: 65px; */
+  }
+
+  #navbar:hover {
+    color: black;
+    background-color: white;
+    transition: 500ms;
+  }
+  #navs {
+    position: relative;
+    /* width: 100%; */
+    height: 56px;
+    /* background-color: white; */
+    /* background-color: white; */
+  }
+  #navbarIcon {
+    margin-top: 2.5%;
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  #faBars {
+    cursor: pointer;
+  }
+
+  #navbarSearch {
+    margin-top: 2.5%;
+  }
+
+  #logo {
+    margin-top: 2.5%;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  }
+
+  #toggleNavbar {
+    height: 100vh;
+  }
+
+  #toggleNavLinks a {
+    text-decoration: none;
+    color: black;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-weight: 300;
+  }
+
+  #toggleFooterLinks a {
+    text-decoration: none;
+    color: black;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 14px;
+    margin-left: 5%;
+  }
+
+  #toggleNavLinks hr {
+    margin-left: 6.5%;
+  }
+
+  #toggleFooterLinks hr {
+    margin-left: 4.8%;
+  }
+}
+
+@media screen and (min-width: 855px) {
+  #navbar {
+    display: none;
+  }
+}
